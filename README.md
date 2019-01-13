@@ -1,1 +1,4 @@
-# izrada-elektricnih-dijagrama
+Izrada električnih dijagrama
+Berto Lušetić
+Ivan Svoboda
+Dario Čirić

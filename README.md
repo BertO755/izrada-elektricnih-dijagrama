@@ -1,4 +1,4 @@
 Izrada električnih dijagrama
-Berto Lušetić
-Ivan Svoboda
-Dario Ćirić
+Berto Lušetić 80%
+Ivan Svoboda 5%
+Dario Ćirić 15%

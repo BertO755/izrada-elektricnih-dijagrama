@@ -1,19 +1,16 @@
 \documentclass{beamer}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 \usetheme{default}
 
 \title{Izrada elektricnih dijagrama}
+\subtitle{LaTeX}
 
-\author{~Berto Lusetic \and ~Ivan Svoboda \and ~Dario Ciric}
+\author{~Berto Lušetić \and ~Ivan Svoboda \and ~Dario Ćirić}
 
 \institute[Sveučilište u Rijeci TEHNIČKI FAKULTET] 
-
-\AtBeginSubsection[]
-{
-  \begin{frame}<beamer>{Outline}
-    \tableofcontents[currentsection,currentsubsection]
-  \end{frame}
-}
 
 \begin{document}
 
@@ -25,24 +22,14 @@
   \tableofcontents
 \end{frame}
 
-% Section and subsections will appear in the presentation overview
-% and table of contents.
-\section{First Main Section}
+\section{Što je Circuitikz?}
 
-\subsection{First Subsection}
-
-\begin{frame}{First Slide Title}{Optional Subtitle}
+\begin{frame}{Što je Circuitikz}
   \begin{itemize}
   \item {
-    My first point.
+    Circuitikz je paket koji nam omogućuje laganu izradu električnih dijagrama u LaTex-u
   }
   \item {
-    My second point.
-  }
-  \end{itemize}
-\end{frame}
-
-\subsection{Second Subsection}
 
 % You can reveal the parts of a slide one at a time
 % with the \pause command:

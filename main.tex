@@ -72,6 +72,55 @@
     \end{center}
 \end{frame}
 
+\begin{frame}{Dodavanje linija}
+    \begin{itemize}
+        \item Linje dodajemo pomoću naredbe draw (-1,0) to[short,o-o] (1,0);
+        
+        između odabranih koordinata
+    \end{itemize}
+    
+\end{frame}
+
+\subsection{Dodavanje linija}
+
+\begin{frame}
+    \begin{figure}[h!]
+        \begin{circuitikz}
+            \draw (-1,0) to[short,o-o] (1,0);
+        \end{circuitikz}
+    \end{figure}
+    \begin{figure}
+          \includegraphics
+          {/slike/line.png}
+    \end{figure}
+    
+\end{frame}
+
+\subsection{Dodavanje strujnih strelica}
+
+\begin{frame}{Dodavanje strujnih strelica}
+    \begin{itemize}
+        \item Struju dodajemo pomoću naredbe \draw (0,0) to[R,i=$i_1$] (2,0);
+        
+        između odabranih koordinata
+        \item S obzirom na smijer struje dodajemo znak < ili > ispred znaka jednakosti
+        \item npr. \draw (0,0) to[R,i<=$i_1$] (2,0);
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}[h!]
+        \begin{circuitikz}
+          \draw (0,0) to[R,i=$i_1$] (2,0);
+        \end{circuitikz}
+    \end{figure}
+    \begin{figure}
+          \includegraphics
+          {/slike/current.png}
+    \end{figure}
+\end{frame}
+
+
 \section{Kada i zašto koristiti Circuitikz paket?}
 
 \begin{frame}{Zašto koristiti Circuitikz paket?}
@@ -107,32 +156,6 @@
   \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \begin{itemize}
-  \item {
-    First item.
-  }
-  \item {   
-    Second item.
-  }
-
-  \item<3-> {
-    Third item.
-  }
-  \item<4-> {
-    Fourth item.
-  }
-  
-  \item<5-> {
-    Fifth item. \uncover<6->{Extra text in the fifth item.}
-  }
-  \end{itemize}
-\end{frame}
-
-\section{Second Main Section}
-
-\subsection{Another Subsection}
-
 \appendix
 \section<presentation>*{\appendixname}
 \subsection<presentation>*{For Further Reading}
@@ -163,5 +186,3 @@
 \end{frame}
 
 \end{document}
-
-

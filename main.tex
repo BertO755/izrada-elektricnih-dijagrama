@@ -2,7 +2,8 @@
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
+\usepackage{tikz}
+\usepackage{circuitikz}
 \usetheme{default}
 
 \title{Izrada elektricnih dijagrama}
@@ -34,27 +35,59 @@
     \end{figure}
   \end{itemize}
 \end{frame}
-% You can reveal the parts of a slide one at a time
-% with the \pause command:
-\begin{frame}{Second Slide Title}
+
+\section{Kako koristiti Circuitikz paket?}
+
+
+\begin{frame}{Kako koristiti Circuitikz paket?}
+  \begin{itemize}
+  \item {
+    Za dodavanje dijagrama trebamo koristiti paket 
+    include{circuitikz}
+  }
+  \item{
+    Svi elementi dijagrama nalazit će se unutar figure
+  }
+  \item{
+  Naredbom begin{circutikz} započinjemo okruženje dijagrama
+  }
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{center}
+        \begin{circuitikz}
+          \draw (0,0)
+          to[V,v=$U_q$] (0,2) % The voltage source
+          to[short] (2,2)
+          to[R=$R_1$] (2,0) % The resistor
+          to[short] (0,0);
+        \end{circuitikz}
+    \end{center}
+    \begin{center}
+        \begin{figure}
+          \includegraphics
+          {/slike/slika2.png}
+        \end{figure}
+    \end{center}
+\end{frame}
+
+\begin{frame}
   \begin{itemize}
   \item {
     First item.
-    \pause % The slide will pause after showing the first item
   }
   \item {   
     Second item.
   }
-  % You can also specify when the content should appear
-  % by using <n->:
+
   \item<3-> {
     Third item.
   }
   \item<4-> {
     Fourth item.
   }
-  % or you can use the \uncover command to reveal general
-  % content (not just \items):
+  
   \item<5-> {
     Fifth item. \uncover<6->{Extra text in the fifth item.}
   }
@@ -65,47 +98,6 @@
 
 \subsection{Another Subsection}
 
-\begin{frame}{Blocks}
-\begin{block}{Block Title}
-You can also highlight sections of your presentation in a block, with it's own title
-\end{block}
-\begin{theorem}
-There are separate environments for theorems, examples, definitions and proofs.
-\end{theorem}
-\begin{example}
-Here is an example of an example block.
-\end{example}
-\end{frame}
-
-% Placing a * after \section means it will not show in the
-% outline or table of contents.
-\section*{Summary}
-
-\begin{frame}{Summary}
-  \begin{itemize}
-  \item
-    The \alert{first main message} of your talk in one or two lines.
-  \item
-    The \alert{second main message} of your talk in one or two lines.
-  \item
-    Perhaps a \alert{third message}, but not more than that.
-  \end{itemize}
-  
-  \begin{itemize}
-  \item
-    Outlook
-    \begin{itemize}
-    \item
-      Something you haven't solved.
-    \item
-      Something else you haven't solved.
-    \end{itemize}
-  \end{itemize}
-\end{frame}
-
-
-
-% All of the following is optional and typically not needed. 
 \appendix
 \section<presentation>*{\appendixname}
 \subsection<presentation>*{For Further Reading}
